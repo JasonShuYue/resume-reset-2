@@ -2,19 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 14px;
-}
-body {
-  background: #efefef;
 }
 
-ol, ul {
+body {
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+ul, ol {
   list-style: none;
 }
 
-//a {
-//  text-decoration: none;
-//}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .left {
   float: left;

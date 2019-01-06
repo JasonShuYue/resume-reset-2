@@ -1,5 +1,5 @@
 {
-  "name": "resume-reset",
+  "name": "resume-reset-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,23 +7,30 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "webpack-dev-server"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonShuYue/resume-reset-2.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonShuYue/resume-reset-2/issues"
+  },
+  "homepage": "https://github.com/JasonShuYue/resume-reset-2#readme",
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "babel-loader": "^8.0.4",
-    "css-loader": "^1.0.1",
-    "image-webpack-loader": "^4.6.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "file-loader": "^3.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "file-loader": "^2.0.0",
-    "node-sass": "^4.10.0",
-    "sass-loader": "^7.1.0"
+    "css-loader": "^2.1.0",
+    "jquery": "^3.3.1",
+    "style-loader": "^0.23.1"
   }
 }
