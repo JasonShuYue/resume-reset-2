@@ -10,13 +10,22 @@
             this.findClosestIndex();
         },
         bindEvents() {
-            let index = 0;
             $(window).on('scroll', (e) => {
-                console.log(this.findClosestIndex())
+                let index = this.findClosestIndex();
+                this.highLight(index);
+            });
+            $(window).on('load', (e) => {
+                let index = this.findClosestIndex();
+                this.highLight(index);
             })
         },
+        highLight(index) {
+            let sections = document.querySelectorAll(".menu-item");
+
+            $(sections[index]).addClass('highLight').siblings().removeClass('highLight');
+        },
         findClosestIndex() {
-            let currentPos = window.scrollY - 100;
+            let currentPos = window.scrollY - 20;
             let sections = document.querySelectorAll("[section-x]");
             let index = 0;
             for(let i = 0; i < sections.length; i++) {

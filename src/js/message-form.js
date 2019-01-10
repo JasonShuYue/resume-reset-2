@@ -1,6 +1,6 @@
 {
     let view = {
-        el: '#message-wrapper',
+        el: '#messageBoard',
         template: `
             <h2 class="title">Message Board</h2>
             <div class="form-wrapper">

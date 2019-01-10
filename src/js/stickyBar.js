@@ -22,7 +22,16 @@
               } else {
                   this.view.removeSticky();
               }
-          })
+          });
+
+        window.addEventListener("load", (e) => {
+            let top = window.scrollY;
+            if(top > 0) {
+                this.view.activeSticky();
+            } else {
+                this.view.removeSticky();
+            }
+        })
         },
 
     };

@@ -13,8 +13,19 @@
 
         bindEvents() {
             $(this.view.el).find('#menu-list').on('click', 'a', (e) => {
-                e.preventDefault();
-                console.log(e.currentTarget)
+                let currentTarget = e.currentTarget;
+                if(!currentTarget.getAttribute('noprevent')) {
+                    e.preventDefault();
+                    let selector = e.currentTarget.attributes["href"].value;
+                    console.log('document.querySelector(selector).offsetTop')
+                    console.log(document.querySelector(selector).offsetTop)
+                    let position = document.querySelector(selector).offsetTop + 50;
+                    window.scrollTo({
+                        top: position,
+                        behavior: "smooth"
+                    });
+                }
+
             });
         }
     };

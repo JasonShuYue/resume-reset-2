@@ -56,7 +56,7 @@ $colorLight: rgb(243,205,206);
             padding: 5px 0;
             display: block;
           }
-          &:hover {
+          &:hover, &.highLight {
             .menu-link::after {
               content: '';
               display: block;
@@ -84,6 +84,7 @@ $colorLight: rgb(243,205,206);
     .banner-bg {
       height: 515px;
       background-image: url("../img/banner-bg.jpg");
+      background-position: center center;
       background-size: cover;
       position: relative;
       &::before {
@@ -101,7 +102,7 @@ $colorLight: rgb(243,205,206);
     max-width: 960px;
     margin: 0 auto;
     position: relative;
-    top: -300px;
+    top: -400px;
     .about-me {
       background: white;
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
@@ -327,11 +328,19 @@ $colorLight: rgb(243,205,206);
           margin-top: 20px;
           text-align: center;
           .row {
+            margin-bottom: 20px;
+            .input-title {
+              display:inline-block;
+              min-width: 10%;
+              text-align: right;
+              font-size: 16px;
+            }
             input {
-              width: 80%;
+              width: 70%;
               max-width: 400px;
               height: 40px;
               padding-left: 20px;
+              margin-left: 10px;
               &:focus {
                 outline: none;
               }
@@ -351,6 +360,7 @@ $colorLight: rgb(243,205,206);
     }
     .message-list {
       margin: 40px 0;
+      padding-top: 40px;
       .message-item {
         max-width: 600px;
         margin: 0 auto 20px auto;
@@ -383,7 +393,21 @@ $colorLight: rgb(243,205,206);
 
 @media (max-width: 600px) {
   .resume-wrapper {
+    .topBar-wrapper {
+      .topBar {
+        .logo {
+          display: none;
+        }
+      }
+    }
     .content {
+      .about-me {
+        .wrapper {
+          .info-wrapper {
+            margin-left: 0;
+          }
+        }
+      }
       .skill-wrapper {
         .skills-part {
           .skill-list {
